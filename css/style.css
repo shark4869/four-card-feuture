@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --border-red: hsl(0, 78%, 62%);
+    --border-cyan: hsl(180, 62%, 55%);
+    --border-orange: hsl(34, 97%, 64%);
+    --border-blue: hsl(212, 86%, 64%);
+    --text-dark-blue: hsl(234, 12%, 34%);
+    --text-grayish-blue: hsl(229, 6%, 66%);
+    --background: hsl(0, 0%, 98%);
+}
+*{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: var(--background);
+}
+body {
+    font-size: 1.5rem;
+   
+}
+.header {
+    width: 650px;
+    max-width: 90%;
+    margin: 30px auto;
+}
+.header__primary {
+    text-align: center;
+    font-weight: 200;
+    color: var(--text-dark-blue);
+}
+.header__secondary {
+    text-align: center;
+    color: var(--text-dark-blue);
+}
+.header__details {
+    text-align: center;
+    color: var(--text-grayish-blue);
+}
+.main {
+    width: 960px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.card-list {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    padding: 30px;
+    width: 300px;
+    height: 240px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
+    position: relative;
+}
+.card-column {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.card--cyan {
+    border-top: 5px solid var(--border-cyan);
+}
+
+.card--red {
+    border-top: 5px solid var(--border-red);
+}
+
+.card--orange {
+    border-top: 5px solid var(--border-orange);
+}
+
+.card--blue {
+    border-top: 5px solid var(--border-blue);
+}
+
+.card__heading {
+    color: var(--text-dark-blue);
+    margin-bottom: 12px;
+}
+.card__heading-detail {
+    color: var(--text-grayish-blue);
+    line-height: 3rem;
+}
+.card__image {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+@media (max-width:1023px)
+{
+    .card-list {
+       flex-direction: column;
+       height: 1050px;
+       justify-content: space-evenly;
+    }
+}
